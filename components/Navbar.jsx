@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// import { useAuthContext } from "@/context/AuthContext";
+import { useAuthContext } from "@/context/AuthContext";
 import Link from "next/link";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
@@ -10,7 +10,7 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
-  //   const { currentUser, logOut } = useAuthContext();
+  const { currentUser } = useAuthContext();
   const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Navbar = () => {
 
   //* with custom hook
   // const { currentUser } = useAuthContext();
-  const currentUser = { displayName: "felix franko" };
+  //   const currentUser = { displayName: "felix franko" };
   // const currentUser = false;
 
   return (
