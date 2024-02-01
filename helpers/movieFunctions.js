@@ -11,6 +11,6 @@ export const getMovies = async (type) => {
     //* This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
-  const data = await res.json();
-  return data;
+  const {results} = await res.json();
+  return results;
 };
