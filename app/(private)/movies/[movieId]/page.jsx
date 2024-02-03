@@ -33,13 +33,13 @@ const MovieDetail = async ({ params: { movieId } }) => {
 
 export default MovieDetail;
 
-export async function generateMetadata({ params: { movieId } }) {
-  let movieDetails = await getMovieDetail(movieId);
-  return {
-    title: movieDetails.title,
-    description: `This is the page of ${movieDetails.title}`,
-  };
-}
+// export async function generateMetadata({ params: { movieId } }) {
+//   let movieDetails = await getMovieDetail(movieId);
+//   return {
+//     title: movieDetails.title,
+//     description: `This is the page of ${movieDetails.title}`,
+//   };
+// }
 
 // Return a list of `params` to populate the [slug] dynamic segment
 // export async function generateStaticParams() {
@@ -51,15 +51,15 @@ export async function generateMetadata({ params: { movieId } }) {
 //   }));
 // }
 
-export async function generateStaticParams() {
-  const [movies1, movies2, movies3, movies4] = await Promise.all([
-    getMovies("now_playing"),
-    getMovies("popular"),
-    getMovies("top_rated"),
-    getMovies("upcoming"),
-  ]);
+// export async function generateStaticParams() {
+//   const [movies1, movies2, movies3, movies4] = await Promise.all([
+//     getMovies("now_playing"),
+//     getMovies("popular"),
+//     getMovies("top_rated"),
+//     getMovies("upcoming"),
+//   ]);
 
-  return [...movies1, ...movies2, ...movies3, ...movies4].map((movie) => ({
-    movieId: movie.id.toString(),
-  }));
-}
+//   return [...movies1, ...movies2, ...movies3, ...movies4].map((movie) => ({
+//     movieId: movie.id.toString(),
+//   }));
+// }
