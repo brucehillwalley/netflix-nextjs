@@ -12,9 +12,9 @@ const Movies = async () => {
   return (
     <>
       <HeroSection
-        movieId={movies[1].id}
-        title={movies[1].title}
-        overview={movies[1].overview}
+        movieId={movies[0].id}
+        title={movies[0].title}
+        overview={movies[0].overview}
       />
       <div className="px-4 md:px12 mt-4">
         <MovieSection title="NOW PLAYING" type="now_playing" />
