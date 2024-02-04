@@ -1,4 +1,4 @@
- [live](https://netflix-nextjjs.netlify.app/) 
+ [live](https://netflix-nextjss.netlify.app/) 
 ## Getting Started
 
 First, run the development server:
